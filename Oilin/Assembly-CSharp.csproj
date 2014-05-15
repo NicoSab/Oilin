@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraMovement.cs" />
-     <Compile Include="Assets\DonePlayerMovement.cs" />
+     <Compile Include="Assets\EndLevel.cs" />
+     <Compile Include="Assets\PlayerKey.cs" />
+     <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\PlumMovement.cs" />
+     <Compile Include="Assets\RecupCard.cs" />
+     <Compile Include="Assets\ScreenFader.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />

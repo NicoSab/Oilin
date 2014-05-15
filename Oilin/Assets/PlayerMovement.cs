@@ -1,25 +1,22 @@
 using UnityEngine;
 using System.Collections;
 
-public class DonePlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 	public float turnSmoothing = 15f;	// A smoothing value for turning the player.
 	public float speedDampTime = 0.1f;	// The damping for the speed parameter
-	
-	
+	public bool activ = true;
+
 	private Animator anim;				// Reference to the animator component.
-	
-	
+
 	void Awake ()
 	{
-		// Setting up the references.
 		anim = GetComponent<Animator>();
 	}
 	
 	
 	void FixedUpdate ()
 	{
-		// Cache the inputs.
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
 		
@@ -30,13 +27,16 @@ public class DonePlayerMovement : MonoBehaviour
 	void Update ()
 	{
 	}
-	
+
+	public void setActive(bool activeNew)
+	{
+		activ = activeNew;
+	}
 	
 	void MovementManagement (float horizontal, float vertical)
-	{
-		
+	{	
 		// If there is some axis input...
-		if(horizontal != 0f || vertical != 0f)
+		if(activ && (horizontal != 0f || vertical != 0f))
 		{
 			// ... set the players rotation and set the speed parameter to 5.5f.
 			Rotating(horizontal, vertical);

@@ -60,8 +60,12 @@ public class CameraMovement : MonoBehaviour
 		// Make sure the camera is looking at the player.
 		SmoothLookAt();
 	}
-	
-	
+
+	public void SetPlayer(Transform p)
+	{
+		player = p;
+	}
+
 	bool ViewingPosCheck (Vector3 checkPos)
 	{
 		RaycastHit hit;

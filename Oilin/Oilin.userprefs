@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlumMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RecupCard.cs">
     <Files>
-      <File FileName="Assets/PlumMovement.cs" Line="24" Column="3" />
-      <File FileName="Assets/DonePlayerMovement.cs" Line="63" Column="17" />
-      <File FileName="Assets/CameraMovement.cs" Line="11" Column="31" />
+      <File FileName="Assets/RecupCard.cs" Line="18" Column="19" />
+      <File FileName="Assets/PlayerKey.cs" Line="6" Column="35" />
+      <File FileName="Assets/EndLevel.cs" Line="23" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
