@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
 		player = GameObject.Find("Robot Kyle").transform;
 		
 		// Setting the relative position as the initial relative position of the camera in the scene.
-		relCameraPos = transform.position - player.position;
+		relCameraPos = (transform.position - player.position) * 0.7f;
 		relCameraPosMag = relCameraPos.magnitude - 0.5f;
 	}
 	

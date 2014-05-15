@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RecupCard.cs">
     <Files>
-      <File FileName="Assets/RecupCard.cs" Line="18" Column="19" />
+      <File FileName="Assets/RecupCard.cs" Line="12" Column="48" />
       <File FileName="Assets/PlayerKey.cs" Line="6" Column="35" />
       <File FileName="Assets/EndLevel.cs" Line="23" Column="23" />
     </Files>
