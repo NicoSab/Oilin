@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RecupCard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndLevel.cs">
     <Files>
-      <File FileName="Assets/RecupCard.cs" Line="12" Column="48" />
-      <File FileName="Assets/PlayerKey.cs" Line="6" Column="35" />
-      <File FileName="Assets/EndLevel.cs" Line="23" Column="23" />
+      <File FileName="Assets/Scripts/EndLevel.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
