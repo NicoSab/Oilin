@@ -7,13 +7,10 @@ public class EnemySight : MonoBehaviour
     public bool playerInSight;							// Whether or not the player is currently sighted.
 	public Vector3 personalLastSighting;				// Last place this enemy spotted the player.
 	
-	
-	private NavMeshAgent nav;							// Reference to the NavMeshAgent component.
-	private SphereCollider col;							// Reference to the sphere collider trigger component.
+
 	private Animator anim;								// Reference to the Animator.
 	private LastPlayerSighting lastPlayerSighting;	// Reference to last global sighting of the player.
     private GameObject player;							// Reference to the player.
-	private Animator playerAnim;						// Reference to the player's animator component.
 	private PlayerHealth playerHealth;				// Reference to the player's health script.
 	private Vector3 previousSighting;					// Where the player was sighted last frame.
 	
@@ -21,12 +18,9 @@ public class EnemySight : MonoBehaviour
 	void Awake ()
 	{
 		// Setting up the references.
-		nav = GetComponent<NavMeshAgent>();
-		col = GetComponent<SphereCollider>();
 		anim = GetComponent<Animator>();
 		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
 		player = GameObject.Find("N40");
-		playerAnim = player.GetComponent<Animator>();
 		playerHealth = player.GetComponent<PlayerHealth>();
 		
 		// Set the personal sighting and the previous sighting to the reset position.
@@ -69,9 +63,9 @@ public class EnemySight : MonoBehaviour
 			if(angle < fieldOfViewAngle * 0.5f)
 			{
 				RaycastHit hit;
-				
+
 				// ... and if a raycast towards the player hits something...
-				if(Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
+				if(Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, 10f))
 				{
 					// ... and if the raycast hits the player...
 					if(hit.collider.gameObject == player)

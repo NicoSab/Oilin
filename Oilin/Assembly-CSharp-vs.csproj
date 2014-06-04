@@ -46,23 +46,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActiveButton.cs" />
+     <Compile Include="Assets\Scripts\ActiveDoor.cs" />
      <Compile Include="Assets\Scripts\AnimatorSetup.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\EndLevel.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyAnimation.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemySight.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\WayPointGizmo.cs" />
      <Compile Include="Assets\Scripts\GameControllerScripts\LastPlayerSighting.cs" />
+     <Compile Include="Assets\Scripts\LevelDynamics\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\DoorAnimation.cs" />
+     <Compile Include="Assets\Scripts\LevelDynamics\EndLevel.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\LiftDoorsTracking.cs" />
+     <Compile Include="Assets\Scripts\LevelDynamics\RecupCard.cs" />
+     <Compile Include="Assets\Scripts\LevelDynamics\ScreenFader.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerKey.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlumMovement.cs" />
-     <Compile Include="Assets\Scripts\RecupCard.cs" />
-     <Compile Include="Assets\Scripts\ScreenFader.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />

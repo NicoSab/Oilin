@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ActiveDoor.cs">
     <Files>
-      <File FileName="Assets/Scripts/EndLevel.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/ActiveButton.cs" Line="26" Column="29" />
+      <File FileName="Assets/Scripts/EnemyScripts/EnemyShooting.cs" Line="43" Column="38" />
+      <File FileName="Assets/Scripts/ActiveDoor.cs" Line="27" Column="4" />
+      <File FileName="Assets/Scripts/EnemyScripts/EnemyAnimation.cs" Line="89" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

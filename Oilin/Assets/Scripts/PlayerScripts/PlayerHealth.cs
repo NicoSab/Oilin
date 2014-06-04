@@ -9,11 +9,11 @@ public class PlayerHealth : MonoBehaviour
 	
 	private EndLevel endLevel;
 	private Animator anim;								// Reference to the animator component.
-	private PlayerMovement playerMovement;			// Reference to the player movement script.
-	private LastPlayerSighting lastPlayerSighting;	// Reference to the LastPlayerSighting script.
+	private PlayerMovement playerMovement;				// Reference to the player movement script.
+	private LastPlayerSighting lastPlayerSighting;		// Reference to the LastPlayerSighting script.
 	private float timer;								// A timer for counting to the reset of the level once the player is dead.
 	private bool playerDead;							// A bool to show if the player is dead or not.
-	
+	private int chanceBeforeDying = 3;
 	
 	void Awake ()
 	{
@@ -21,23 +21,34 @@ public class PlayerHealth : MonoBehaviour
 		anim = GetComponent<Animator>();
 		playerMovement = GetComponent<PlayerMovement>();
 		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
+		endLevel = GameObject.Find("EndLevel").GetComponent<EndLevel>();
 	}
 	
 	
     void Update ()
 	{
 		// If health is less than or equal to 0...
-		if(health <= 0f)
+		if (health <= 0)
 		{
-			// ... and if the player is not yet dead...
-			if(!playerDead)
-				// ... call the PlayerDying function.
-				PlayerDying();
+			if(chanceBeforeDying == 0)
+			{
+				// ... and if the player is not yet dead...
+				if(!playerDead)
+					// ... call the PlayerDying function.
+					PlayerDying();
+				else
+				{
+					// Otherwise, if the player is dead, call the PlayerDead and LevelReset functions.
+					PlayerDead();
+					LevelReset();
+				}
+			}
 			else
 			{
-				// Otherwise, if the player is dead, call the PlayerDead and LevelReset functions.
-				PlayerDead();
-				LevelReset();
+				health = 5;
+				--chanceBeforeDying;
+				Transform safePoint = chooseSafePoint();
+				transform.position = safePoint.position;
 			}
 		}
 	}
@@ -52,7 +63,7 @@ public class PlayerHealth : MonoBehaviour
 		anim.SetBool("Dead", playerDead);
 		
 		// Play the dying sound effect at the player's location.
-		AudioSource.PlayClipAtPoint(deathClip, transform.position);
+		//AudioSource.PlayClipAtPoint(deathClip, transform.position);
 	}
 	
 	
@@ -70,7 +81,7 @@ public class PlayerHealth : MonoBehaviour
 		lastPlayerSighting.position = lastPlayerSighting.resetPosition;
 		
 		// Stop the footsteps playing.
-		audio.Stop();
+		//audio.Stop();
 	}
 	
 	
@@ -91,4 +102,22 @@ public class PlayerHealth : MonoBehaviour
 		// Decrement the player's health by amount.
         health -= amount;
     }
+
+	Transform chooseSafePoint()
+	{
+		float delta;
+		Transform res = null;
+		float min = 1000f;
+
+		foreach (Transform safePoint in lastPlayerSighting.SafePoints) {
+			delta = safePoint.position.y - transform.position.y;
+			if (delta < min)
+			{
+				min = delta;
+				res = safePoint;
+			}
+		}
+
+		return res;
+	}
 }

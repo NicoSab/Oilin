@@ -13,9 +13,8 @@ public class EnemyShooting : MonoBehaviour
 	private Animator anim;								// Reference to the animator.
 	private LineRenderer laserShotLine;					// Reference to the laser shot line renderer.
 	private Light laserShotLight;						// Reference to the laser shot light.
-	private SphereCollider col;							// Reference to the sphere collider.
 	private Transform player;							// Reference to the player's transform.
-	private PlayerHealth playerHealth;				// Reference to the player's health.
+	private PlayerHealth playerHealth;					// Reference to the player's health.
 	private bool shooting;								// A bool to say whether or not the enemy is currently shooting.
 	private float scaledDamage;							// Amount of damage that is scaled by the distance from the player.
 	
@@ -26,7 +25,6 @@ public class EnemyShooting : MonoBehaviour
 		anim = GetComponent<Animator>();
 		laserShotLine = GetComponentInChildren<LineRenderer>();
 		laserShotLight = laserShotLine.gameObject.light;
-		col = GetComponent<SphereCollider>();
 		player = GameObject.Find("N40").transform;
 		playerHealth = player.gameObject.GetComponent<PlayerHealth>();
 		
@@ -43,7 +41,7 @@ public class EnemyShooting : MonoBehaviour
 	{
 		// Cache the current value of the shot curve.
 		float shot = anim.GetFloat("Shot");
-		
+
 		// If the shot curve is peaking and the enemy is not currently shooting...
 		if(shot > 0.5f && !shooting)
 			// ... shoot
@@ -81,8 +79,9 @@ public class EnemyShooting : MonoBehaviour
 		shooting = true;
 		
 		// The fractional distance from the player, 1 is next to the player, 0 is the player is at the extent of the sphere collider.
-		float fractionalDistance = (col.radius - Vector3.Distance(transform.position, player.position)) / col.radius;
+		float fractionalDistance = (10f - Vector3.Distance(transform.position, player.position)) / 10f;
 	
+
 		// The damage is the scaled damage, scaled by the fractional distance, plus the minimum damage.
 		float damage = scaledDamage * fractionalDistance + minimumDamage;
 

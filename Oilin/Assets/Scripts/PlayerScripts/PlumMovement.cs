@@ -11,13 +11,11 @@ public class PlumMovement : MonoBehaviour {
 	public float speedDampTime = 0.1f;	// The damping for the speed parameter
 
 	private bool activeMov = false;
-	private Animator anim;
 
 	void Awake()
 	{
 			player = GameObject.Find("N40").transform;
 			relPlumPos = transform.position - player.position;
-			anim = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
