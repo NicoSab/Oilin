@@ -20,7 +20,9 @@ public class PlayerHealth : MonoBehaviour
 		// Setting up the references.
 		anim = GetComponent<Animator>();
 		playerMovement = GetComponent<PlayerMovement>();
-		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
+		GameObject gameController = GameObject.Find ("gameController");
+		if (gameController != null)
+			lastPlayerSighting = gameController.GetComponent<LastPlayerSighting>();
 	}
 	
 	

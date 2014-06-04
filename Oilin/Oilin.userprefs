@@ -1,8 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ExitGesture.cs">
     <Files>
-      <File FileName="Assets/Scripts/EndLevel.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\PlayerScripts\PlayerHealth.cs" Line="25" Column="2" />
+      <File FileName="Assets\Scripts\PlayerScripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EndLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerScripts\PlumMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\PlayGesture.cs" Line="11" Column="28" />
+      <File FileName="Assets\ExitGesture.cs" Line="8" Column="17" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="193" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
