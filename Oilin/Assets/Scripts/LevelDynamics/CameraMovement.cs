@@ -5,7 +5,6 @@ public class CameraMovement : MonoBehaviour
 {
 	public float smooth = 1.5f;         // The relative speed at which the camera will catch up.
 	
-	
 	private Transform player;           // Reference to the player's transform.
 	private Vector3 relCameraPos;       // The relative position of the camera from the player.
 	private float relCameraPosMag;      // The distance of the camera from the player.
@@ -69,15 +68,22 @@ public class CameraMovement : MonoBehaviour
 	bool ViewingPosCheck (Vector3 checkPos)
 	{
 		RaycastHit hit;
-		
-		// If a raycast from the check position to the player hits something...
+
 		if(Physics.Raycast(checkPos, player.position - checkPos, out hit, relCameraPosMag))
-			// ... if it is not the player...
-			if(hit.transform != player)
-				// This position isn't appropriate.
-				return false;
-		
-		// If we haven't hit anything or we've hit the player, this is an appropriate position.
+		{
+
+			if (hit.transform.tag == "enemy")
+			{
+				if(Physics.Raycast(hit.point, player.position - hit.point, out hit, relCameraPosMag))
+					if(hit.transform != player)
+						return false;
+			}
+			else 
+			{
+				if(hit.transform != player)
+					return false;
+			}
+		}
 		newPos = checkPos;
 		return true;
 	}

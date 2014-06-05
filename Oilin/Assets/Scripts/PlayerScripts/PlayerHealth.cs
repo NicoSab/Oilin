@@ -114,7 +114,7 @@ public class PlayerHealth : MonoBehaviour
 		float min = 1000f;
 
 		foreach (Transform safePoint in lastPlayerSighting.SafePoints) {
-			delta = safePoint.position.y - transform.position.y;
+			delta = safePoint.position.z - transform.position.z;
 			if (delta < min)
 			{
 				min = delta;

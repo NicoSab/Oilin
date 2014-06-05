@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class EndLevel : MonoBehaviour {
-
-	private float timeToEnd = 3f;
+	
 	private GameObject player;                      // Reference to the player.
 	private Animator playerAnim;                    // Reference to the players animator component.
 	private CameraMovement camMovement;             // Reference to the camera movement script.

@@ -29,7 +29,7 @@ public class ActiveDoor : MonoBehaviour {
 				open = true;
 			} else {
 				if (requireActivation) {
-					if (ab.active)
+					if (ab.on)
 						open = true;
 				}
 				else {

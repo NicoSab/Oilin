@@ -108,6 +108,6 @@ public class EnemyShooting : MonoBehaviour
 		laserShotLight.intensity = flashIntensity;
 		
 		// Play the gun shot clip at the position of the muzzle flare.
-		AudioSource.PlayClipAtPoint(shotClip, laserShotLight.transform.position);
+		//AudioSource.PlayClipAtPoint(shotClip, laserShotLight.transform.position);
 	}
 }

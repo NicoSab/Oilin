@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ActiveButton : MonoBehaviour {
 
-	public bool active = false;
+	public bool on = false;
 	public Material unlockMat;
 
 	private GameObject player;
@@ -21,7 +21,7 @@ public class ActiveButton : MonoBehaviour {
 		{
 			if (Input.GetKeyDown("q"))
 			{
-				active = true;
+				on = true;
 				Renderer screen = transform.Find("prop_switchUnit_screen_001").renderer;
 				screen.material = unlockMat;
 			}
