@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
@@ -42,7 +41,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																													GlobalSection(MonoDevelopProperties) = preSolution
+																																																															GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -59,52 +58,6 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
-	EndGlobalSection
-
-EndGlobal
-=======
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{AB8858EB-941A-E33C-DF88-A0444307E935}") = "Oilin", "Assembly-CSharp-firstpass.csproj", "{3F29374F-1FE5-65FE-9B4F-4BC044FD8C83}"
-EndProject
-Project("{AB8858EB-941A-E33C-DF88-A0444307E935}") = "Oilin", "Assembly-CSharp.csproj", "{4C6D3997-E4EA-A1A2-E6F1-D3E754A9828C}"
-EndProject
-Project("{AB8858EB-941A-E33C-DF88-A0444307E935}") = "Oilin", "Assembly-CSharp-Editor.csproj", "{33A333DD-D068-182C-C0DA-5DAD1E8F49FD}"
-EndProject
-Project("{AB8858EB-941A-E33C-DF88-A0444307E935}") = "Oilin", "Assembly-UnityScript-firstpass.unityproj", "{9DC55E89-410D-4B1C-D9E7-7FA7B9B50A02}"
-EndProject
-Project("{AB8858EB-941A-E33C-DF88-A0444307E935}") = "Oilin", "Assembly-UnityScript-Editor.unityproj", "{8B52825D-290D-8975-C8C6-FCFAA5358D38}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F29374F-1FE5-65FE-9B4F-4BC044FD8C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F29374F-1FE5-65FE-9B4F-4BC044FD8C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F29374F-1FE5-65FE-9B4F-4BC044FD8C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F29374F-1FE5-65FE-9B4F-4BC044FD8C83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C6D3997-E4EA-A1A2-E6F1-D3E754A9828C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C6D3997-E4EA-A1A2-E6F1-D3E754A9828C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C6D3997-E4EA-A1A2-E6F1-D3E754A9828C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C6D3997-E4EA-A1A2-E6F1-D3E754A9828C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33A333DD-D068-182C-C0DA-5DAD1E8F49FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33A333DD-D068-182C-C0DA-5DAD1E8F49FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33A333DD-D068-182C-C0DA-5DAD1E8F49FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33A333DD-D068-182C-C0DA-5DAD1E8F49FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DC55E89-410D-4B1C-D9E7-7FA7B9B50A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DC55E89-410D-4B1C-D9E7-7FA7B9B50A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DC55E89-410D-4B1C-D9E7-7FA7B9B50A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DC55E89-410D-4B1C-D9E7-7FA7B9B50A02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B52825D-290D-8975-C8C6-FCFAA5358D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B52825D-290D-8975-C8C6-FCFAA5358D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B52825D-290D-8975-C8C6-FCFAA5358D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B52825D-290D-8975-C8C6-FCFAA5358D38}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 																																																											GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
@@ -126,4 +79,3 @@ Global
 	EndGlobalSection
 
 EndGlobal
->>>>>>> c01355888c3ae483fc45e90e6f9c0d951ab37e45

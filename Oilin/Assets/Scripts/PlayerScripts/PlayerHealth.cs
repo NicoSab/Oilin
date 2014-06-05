@@ -20,14 +20,12 @@ public class PlayerHealth : MonoBehaviour
 		// Setting up the references.
 		anim = GetComponent<Animator>();
 		playerMovement = GetComponent<PlayerMovement>();
-<<<<<<< HEAD
-		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
-		endLevel = GameObject.Find("EndLevel").GetComponent<EndLevel>();
-=======
+		GameObject tmp = GameObject.Find ("EndLevel");
+		if (tmp != null)
+			endLevel = tmp.GetComponent<EndLevel>();
 		GameObject gameController = GameObject.Find ("gameController");
 		if (gameController != null)
 			lastPlayerSighting = gameController.GetComponent<LastPlayerSighting>();
->>>>>>> c01355888c3ae483fc45e90e6f9c0d951ab37e45
 	}
 	
 	
