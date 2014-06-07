@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
     public float health = 5f;							// How much health the player has left.
 	public float resetAfterDeathTime = 3f;				// How much time from the player dying to the level reseting.
 	public AudioClip deathClip;							// The sound effect of the player dying.
+	public Texture2D barreVie;
 	
 	private EndLevel endLevel;
 	private Animator anim;								// Reference to the animator component.
@@ -27,14 +28,17 @@ public class PlayerHealth : MonoBehaviour
 		if (gameController != null)
 			lastPlayerSighting = gameController.GetComponent<LastPlayerSighting>();
 	}
-	
+
+	void OnGUI()
+	{
+		GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
+	}
 	
     void Update ()
 	{
 		// If health is less than or equal to 0...
 		if (health <= 0)
 		{
-			print ("health");
 			if(chanceBeforeDying == 0)
 			{
 				// ... and if the player is not yet dead...
