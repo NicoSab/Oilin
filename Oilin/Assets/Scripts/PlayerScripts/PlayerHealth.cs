@@ -31,7 +31,8 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
+		if (barreVie != null)
+			GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
 	}
 	
 	protected bool paused;
