@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 100f;							// How much health the player has left.
-	public float resetAfterDeathTime = 5f;				// How much time from the player dying to the level reseting.
+    public float health = 5f;							// How much health the player has left.
+	public float resetAfterDeathTime = 3f;				// How much time from the player dying to the level reseting.
 	public AudioClip deathClip;							// The sound effect of the player dying.
 	
 	private EndLevel endLevel;
@@ -43,7 +43,6 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (!paused) 
 		{
-			// If health is less than or equal to 0...
 			if (health <= 0)
 			{
 				if(chanceBeforeDying == 0)
@@ -68,12 +67,6 @@ public class PlayerHealth : MonoBehaviour
 				}
 			}
 		}
-	}
-
-	void punchingFalse()
-	{
-		Debug.Log("FALLLLLSE");
-		playerMovement.setPunching(false);
 	}
 	
 	
