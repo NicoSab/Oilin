@@ -34,30 +34,43 @@ public class PlayerHealth : MonoBehaviour
 		GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
 	}
 	
+	protected bool paused;
+	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
     void Update ()
 	{
-		// If health is less than or equal to 0...
-		if (health <= 0)
+		if (!paused) 
 		{
-			if(chanceBeforeDying == 0)
+			if (health <= 0)
 			{
-				// ... and if the player is not yet dead...
-				if(!playerDead)
-					// ... call the PlayerDying function.
-					PlayerDying();
+				if(chanceBeforeDying == 0)
+				{
+					// ... and if the player is not yet dead...
+					if(!playerDead)
+						// ... call the PlayerDying function.
+						PlayerDying();
+					else
+					{
+						// Otherwise, if the player is dead, call the PlayerDead and LevelReset functions.
+						PlayerDead();
+						LevelReset();
+					}
+				}
 				else
 				{
-					// Otherwise, if the player is dead, call the PlayerDead and LevelReset functions.
-					PlayerDead();
-					LevelReset();
+					health = 5;
+					--chanceBeforeDying;
+					Transform safePoint = chooseSafePoint();
+					transform.position = safePoint.position;
 				}
-			}
-			else
-			{
-				health = 5;
-				--chanceBeforeDying;
-				Transform safePoint = chooseSafePoint();
-				transform.position = safePoint.position;
 			}
 		}
 	}

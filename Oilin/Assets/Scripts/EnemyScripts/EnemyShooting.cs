@@ -36,27 +36,40 @@ public class EnemyShooting : MonoBehaviour
 		//scaledDamage = maximumDamage - minimumDamage;
 	}
 	
+	protected bool paused;
 	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void Update ()
 	{
-		// Cache the current value of the shot curve.
-		float shot = anim.GetFloat("Shot");
-
-		// If the shot curve is peaking and the enemy is not currently shooting...
-		if(shot > 0.5f && !shooting)
-			// ... shoot
-			Shoot();
-		
-		// If the shot curve is no longer peaking...
-		if(shot < 0.5f)
+		if (!paused) 
 		{
-			// ... the enemy is no longer shooting and disable the line renderer.
-			shooting = false;
-			laserShotLine.enabled = false;
+			// Cache the current value of the shot curve.
+			float shot = anim.GetFloat("Shot");
+
+			// If the shot curve is peaking and the enemy is not currently shooting...
+			if(shot > 0.5f && !shooting)
+				// ... shoot
+				Shoot();
+			
+			// If the shot curve is no longer peaking...
+			if(shot < 0.5f)
+			{
+				// ... the enemy is no longer shooting and disable the line renderer.
+				shooting = false;
+				laserShotLine.enabled = false;
+			}
+			
+			// Fade the light out.
+			laserShotLight.intensity = Mathf.Lerp(laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
 		}
-		
-		// Fade the light out.
-		laserShotLight.intensity = Mathf.Lerp(laserShotLight.intensity, 0f, fadeSpeed * Time.deltaTime);
 	}
 	
 	

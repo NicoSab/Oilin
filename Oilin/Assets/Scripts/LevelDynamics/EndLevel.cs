@@ -46,10 +46,23 @@ public class EndLevel : MonoBehaviour {
 		if(timer >= end2)
 			sf.FadeScreen();
 	}
-
+	protected bool paused;
+	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void Update()
 	{
-		if (col)
-			EndOfLevel();
+		if (!paused) 
+		{
+			if (col)
+				EndOfLevel();
+		}
 	}
 }

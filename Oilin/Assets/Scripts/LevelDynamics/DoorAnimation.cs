@@ -65,18 +65,31 @@ public class DoorAnimation : MonoBehaviour
 			count = Mathf.Max(0, count-1);
 	}
 	
+	protected bool paused;
 	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void Update ()
 	{
-		// Set the open parameter.
-		anim.SetBool("Open", count > 0);
-		
-		// If the door is opening or closing...
-		if(anim.IsInTransition(0) && !audio.isPlaying)
+		if (!paused) 
 		{
-			// ... play the door swish audio clip.
-			audio.clip = doorSwishClip;
-			audio.Play();
+			// Set the open parameter.
+			anim.SetBool("Open", count > 0);
+			
+			// If the door is opening or closing...
+			if(anim.IsInTransition(0) && !audio.isPlaying)
+			{
+				// ... play the door swish audio clip.
+				audio.clip = doorSwishClip;
+				audio.Play();
+			}
 		}
 	}
 }

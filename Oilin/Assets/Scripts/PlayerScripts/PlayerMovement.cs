@@ -16,23 +16,36 @@ public class PlayerMovement : MonoBehaviour
 		anim = GetComponent<Animator>();
 	}
 	
+	protected bool paused;
 	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void FixedUpdate ()
 	{
-		float h = Input.GetAxis("Horizontal");
-		float v = Input.GetAxis("Vertical");
+		if (!paused) 
+		{
+				float h = Input.GetAxis("Horizontal");
+				float v = Input.GetAxis("Vertical");
 
-		MovementManagement(h, v);
+				MovementManagement(h, v);
 
-		if (Input.GetKeyDown("e")) {
-			punching = true;
-			Transform enemy = findNearestEnemy();
-			Rotating(enemy.position.x, enemy.position.z);
-			anim.SetTrigger("Punch");
-		}
+			if (Input.GetKeyDown("e")) {
+				punching = true;
+				Transform enemy = findNearestEnemy();
+				Rotating(enemy.position.x, enemy.position.z);
+				anim.SetTrigger("Punch");
+			}
 
-		if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Punch")) {
-			punching = false;
+			if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Punch")) {
+				punching = false;
+			}
 		}
 	}
 

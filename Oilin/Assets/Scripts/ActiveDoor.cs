@@ -47,9 +47,20 @@ public class ActiveDoor : MonoBehaviour {
 		if (c.gameObject == player || c.gameObject == plum)
 				open = false;
 	}
-
+	protected bool paused;
+	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void Update()
 	{
-		anim.SetBool("Open", open);
+		if (!paused) 
+			anim.SetBool("Open", open);
 	}
 }

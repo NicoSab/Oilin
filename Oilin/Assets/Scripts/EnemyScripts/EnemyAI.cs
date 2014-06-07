@@ -31,25 +31,36 @@ public class EnemyAI : MonoBehaviour
 		playerHealth = player.GetComponent<PlayerHealth>();
 		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
 	}
+	protected bool paused;
 	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	
 	void Update ()
 	{
-		// If the player is in sight and is alive...
-		if(!enemyAnimation.enemyDead && enemySight.playerInSight && playerHealth.health > 0f){
-			// ... shoot.
-			Shooting();
-		}
-		// If the player has been sighted and isn't dead...
-		else if(!enemyAnimation.enemyDead && enemySight.personalLastSighting != lastPlayerSighting.resetPosition
-		        && playerHealth.health > 0f) {
-			// ... chase.
-			Chasing();
-		}
-		// Otherwise...
-		else if (!enemyAnimation.enemyDead){
-			// ... patrol.
-			Patrolling();
+		if (!paused) 
+		{
+			// If the player is in sight and is alive...
+			if(enemySight.playerInSight && playerHealth.health > 0f)
+				// ... shoot.
+				Shooting();
+			
+			// If the player has been sighted and isn't dead...
+			else if(enemySight.personalLastSighting != lastPlayerSighting.resetPosition && playerHealth.health > 0f)
+				// ... chase.
+				Chasing();
+			
+			// Otherwise...
+			else
+				// ... patrol.
+				Patrolling();
 		}
 	}
 
