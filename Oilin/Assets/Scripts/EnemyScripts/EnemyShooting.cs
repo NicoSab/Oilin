@@ -3,8 +3,8 @@ using System.Collections;
 
 public class EnemyShooting : MonoBehaviour
 {
-	public float maximumDamage = 120f;					// The maximum potential damage per shot.
-	public float minimumDamage = 45f;					// The minimum potential damage per shot.
+	//public float maximumDamage = 120f;					// The maximum potential damage per shot.
+	//public float minimumDamage = 45f;					// The minimum potential damage per shot.
 	public AudioClip shotClip;							// An audio clip to play when a shot happens.
 	public float flashIntensity = 3f;					// The intensity of the light when the shot happens.
 	public float fadeSpeed = 10f;						// How fast the light will fade after the shot.
@@ -33,7 +33,7 @@ public class EnemyShooting : MonoBehaviour
 		laserShotLight.intensity = 0f;
 		
 		// The scaledDamage is the difference between the maximum and the minimum damage.
-		scaledDamage = maximumDamage - minimumDamage;
+		//scaledDamage = maximumDamage - minimumDamage;
 	}
 	
 	
@@ -75,18 +75,18 @@ public class EnemyShooting : MonoBehaviour
 	
 	void Shoot ()
 	{
-		// The enemy is shooting.
+		// The enemy is shooting.;
 		shooting = true;
 		
-		// The fractional distance from the player, 1 is next to the player, 0 is the player is at the extent of the sphere collider.
+		/* The fractional distance from the player, 1 is next to the player, 0 is the player is at the extent of the sphere collider.
 		float fractionalDistance = (10f - Vector3.Distance(transform.position, player.position)) / 10f;
 	
 
 		// The damage is the scaled damage, scaled by the fractional distance, plus the minimum damage.
-		float damage = scaledDamage * fractionalDistance + minimumDamage;
+		float damage = scaledDamage * fractionalDistance + minimumDamage;*/
 
 		// The player takes damage.
-		playerHealth.TakeDamage(damage);
+		playerHealth.TakeDamage(1f);
 		
 		// Display the shot effects.
 		ShotEffects();

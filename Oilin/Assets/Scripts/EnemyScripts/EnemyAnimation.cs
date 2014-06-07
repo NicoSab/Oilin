@@ -4,13 +4,13 @@ using System.Collections;
 public class EnemyAnimation : MonoBehaviour
 {
 	public float deadZone = 5f;					// The number of degrees for which the rotation isn't controlled by Mecanim.
-	
-	private bool enemyDead = false;
+	public bool enemyDead = false;				// An boolean true when the enemy is dead.
+
 	private Transform player;					// Reference to the player's transform.
-	private EnemySight enemySight;			// Reference to the EnemySight script.
+	private EnemySight enemySight;				// Reference to the EnemySight script.
 	private NavMeshAgent nav;					// Reference to the nav mesh agent.
 	private Animator anim;						// Reference to the Animator.
-	private AnimatorSetup animSetup;		// An instance of the AnimatorSetup helper class.
+	private AnimatorSetup animSetup;			// An instance of the AnimatorSetup helper class.
 
 
 	void Awake ()
@@ -116,8 +116,7 @@ public class EnemyAnimation : MonoBehaviour
 	{
 		if(!enemyDead) {
 			enemyDead = true;
-			anim.SetBool("Dead", enemyDead);
-		}else if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Dying"))
-			anim.SetBool("Dead", false);
+			anim.SetTrigger("Dead");
+		}
 	}
 }

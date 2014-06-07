@@ -9,9 +9,10 @@ public class EnemySight : MonoBehaviour
 	
 
 	private Animator anim;								// Reference to the Animator.
-	private LastPlayerSighting lastPlayerSighting;	// Reference to last global sighting of the player.
+	private EnemyAnimation enemyAnimation;				// Reference to the EnemyAnimation script.
+	private LastPlayerSighting lastPlayerSighting;		// Reference to last global sighting of the player.
     private GameObject player;							// Reference to the player.
-	private PlayerHealth playerHealth;				// Reference to the player's health script.
+	private PlayerHealth playerHealth;					// Reference to the player's health script.
 	private Vector3 previousSighting;					// Where the player was sighted last frame.
 	
 	
@@ -19,6 +20,7 @@ public class EnemySight : MonoBehaviour
 	{
 		// Setting up the references.
 		anim = GetComponent<Animator>();
+		enemyAnimation = GetComponent<EnemyAnimation>();
 		lastPlayerSighting = GameObject.Find("gameController").GetComponent<LastPlayerSighting>();
 		player = GameObject.Find("N40");
 		playerHealth = player.GetComponent<PlayerHealth>();
@@ -39,7 +41,7 @@ public class EnemySight : MonoBehaviour
 		previousSighting = lastPlayerSighting.position;
 		
 		// If the player is alive...
-		if(playerHealth.health > 0f)
+		if(!enemyAnimation.enemyDead && playerHealth.health > 0f)
 			// ... set the animator parameter to whether the player is in sight or not.
 			anim.SetBool("PlayerInSight", playerInSight);
 		else
@@ -60,7 +62,7 @@ public class EnemySight : MonoBehaviour
 			float angle = Vector3.Angle(direction, transform.forward);
 			
 			// If the angle between forward and where the player is, is less than half the angle of view...
-			if(angle < fieldOfViewAngle * 0.5f)
+			if(!enemyAnimation.enemyDead && angle < fieldOfViewAngle * 0.5f)
 			{
 				RaycastHit hit;
 

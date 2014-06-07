@@ -19,7 +19,7 @@ public class ActiveButton : MonoBehaviour {
 	{
 		if (c.gameObject == player || c.gameObject == plum)
 		{
-			if (Input.GetKeyDown("q"))
+			if (Input.GetKeyDown("r"))
 			{
 				on = true;
 				Renderer screen = transform.Find("prop_switchUnit_screen_001").renderer;

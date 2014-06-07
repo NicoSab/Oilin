@@ -10,11 +10,12 @@ public class EnemyAI : MonoBehaviour
 	public Transform[] patrolWayPoints;						// An array of transforms for the patrol route.
 	
 	
-	private EnemySight enemySight;						// Reference to the EnemySight script.
+	private EnemySight enemySight;							// Reference to the EnemySight script.
+	private EnemyAnimation enemyAnimation;					// Reference to the EnemyAnimation script.
 	private NavMeshAgent nav;								// Reference to the nav mesh agent.
 	private Transform player;								// Reference to the player's transform.
-	private PlayerHealth playerHealth;					// Reference to the PlayerHealth script.
-	private LastPlayerSighting lastPlayerSighting;		// Reference to the last global sighting of the player.
+	private PlayerHealth playerHealth;						// Reference to the PlayerHealth script.
+	private LastPlayerSighting lastPlayerSighting;			// Reference to the last global sighting of the player.
 	private float chaseTimer;								// A timer for the chaseWaitTime.
 	private float patrolTimer;								// A timer for the patrolWaitTime.
 	private int wayPointIndex;								// A counter for the way point array.
@@ -24,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 	{
 		// Setting up the references.
 		enemySight = GetComponent<EnemySight>();
+		enemyAnimation = GetComponent<EnemyAnimation>();
 		nav = GetComponent<NavMeshAgent>();
 		player = GameObject.Find("N40").transform;
 		playerHealth = player.GetComponent<PlayerHealth>();
@@ -34,19 +36,21 @@ public class EnemyAI : MonoBehaviour
 	void Update ()
 	{
 		// If the player is in sight and is alive...
-		if(enemySight.playerInSight && playerHealth.health > 0f)
+		if(!enemyAnimation.enemyDead && enemySight.playerInSight && playerHealth.health > 0f){
 			// ... shoot.
 			Shooting();
-		
+		}
 		// If the player has been sighted and isn't dead...
-		else if(enemySight.personalLastSighting != lastPlayerSighting.resetPosition && playerHealth.health > 0f)
+		else if(!enemyAnimation.enemyDead && enemySight.personalLastSighting != lastPlayerSighting.resetPosition
+		        && playerHealth.health > 0f) {
 			// ... chase.
 			Chasing();
-		
+		}
 		// Otherwise...
-		else
+		else if (!enemyAnimation.enemyDead){
 			// ... patrol.
 			Patrolling();
+		}
 	}
 
 

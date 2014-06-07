@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
 		MovementManagement(h, v);
 
-		if (Input.GetKeyDown("a")) {
+		if (Input.GetKeyDown("e")) {
 			punching = true;
 			Transform enemy = findNearestEnemy();
 			Rotating(enemy.position.x, enemy.position.z);
@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
 
 		if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Punch")) {
 			punching = false;
-			anim.SetBool("Punch", false);
 		}
 	}
 
@@ -45,10 +44,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		//print (c.gameObject);
 		if (contains (c) && punching)
-		{
-			print (c.gameObject);
 			c.gameObject.GetComponent<EnemyAnimation>().SendMessage("Die");
-		}
 	}
 
 	public void setActive(bool activeNew)
