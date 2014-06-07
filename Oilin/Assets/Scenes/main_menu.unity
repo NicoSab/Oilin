@@ -1313,6 +1313,8 @@ MonoBehaviour:
   health: 100
   resetAfterDeathTime: 5
   deathClip: {fileID: 0}
+  barreVie: {fileID: 0}
+  barreVieBg: {fileID: 0}
 --- !u!136 &1464697006
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -64,10 +64,12 @@
      <Compile Include="Assets\Scripts\LevelDynamics\EndLevel.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\LiftDoorsTracking.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\RecupCard.cs" />
+     <Compile Include="Assets\Scripts\LevelDynamics\RecupOil.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\ScreenFader.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerKey.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerOil.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlumMovement.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />

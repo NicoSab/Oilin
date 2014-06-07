@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 	public float resetAfterDeathTime = 3f;				// How much time from the player dying to the level reseting.
 	public AudioClip deathClip;							// The sound effect of the player dying.
 	public Texture2D barreVie;
+	public Texture2D barreVieBg;
 	
 	private EndLevel endLevel;
 	private Animator anim;								// Reference to the animator component.
@@ -31,6 +32,8 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnGUI()
 	{
+		if (barreVieBg != null)
+			GUI.DrawTexture(new Rect(20,30,barreVieBg.width, barreVieBg.height), barreVieBg);
 		if (barreVie != null)
 			GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
 	}
