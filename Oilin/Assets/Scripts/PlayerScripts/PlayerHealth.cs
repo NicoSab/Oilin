@@ -56,6 +56,12 @@ public class PlayerHealth : MonoBehaviour
 			}
 		}
 	}
+
+	void punchingFalse()
+	{
+		Debug.Log("FALLLLLSE");
+		playerMovement.setPunching(false);
+	}
 	
 	
 	void PlayerDying ()

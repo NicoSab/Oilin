@@ -12,6 +12,7 @@ public class ActiveDoor : MonoBehaviour {
 	private GameObject plum;
 	private Animator anim;
 	private bool open = false;
+	private bool hasKey;
 
 	void Awake()
 	{
@@ -26,7 +27,9 @@ public class ActiveDoor : MonoBehaviour {
 		if (c.gameObject == player || c.gameObject == plum)
 		{
 			if (requireKey) {
-				open = true;
+				hasKey = player.GetComponent<PlayerKey>().playerHasKey;
+				if (hasKey)
+					open = true;
 			} else {
 				if (requireActivation) {
 					if (ab.on)

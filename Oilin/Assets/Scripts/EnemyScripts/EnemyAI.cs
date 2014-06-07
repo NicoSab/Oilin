@@ -48,8 +48,8 @@ public class EnemyAI : MonoBehaviour
 			// ... patrol.
 			Patrolling();
 	}
-	
-	
+
+
 	void Shooting ()
 	{
 		// Stop the enemy where it is.

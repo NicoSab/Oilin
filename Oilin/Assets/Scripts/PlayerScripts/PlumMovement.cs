@@ -15,7 +15,7 @@ public class PlumMovement : MonoBehaviour {
 	void Awake()
 	{
 			player = GameObject.Find("N40").transform;
-			relPlumPos = transform.position - player.position;
+			relPlumPos = transform.position - player.position ;
 	}
 
 	void FixedUpdate()

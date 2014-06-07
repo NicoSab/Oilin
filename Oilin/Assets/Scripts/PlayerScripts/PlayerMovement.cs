@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public bool activ = true;
 	public GameObject[] enemies;
 
+	private bool punching;
 	private Animator anim;				// Reference to the animator component.
 
 	void Awake ()
@@ -20,19 +21,34 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
-		
+
 		MovementManagement(h, v);
 
 		if (Input.GetKeyDown("a")) {
+			punching = true;
 			Transform enemy = findNearestEnemy();
 			Rotating(enemy.position.x, enemy.position.z);
 			anim.SetTrigger("Punch");
 		}
+
+		if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Punch")) {
+			punching = false;
+			anim.SetBool("Punch", false);
+		}
 	}
-	
-	
+
 	void Update ()
 	{
+	}
+
+	void OnCollisionEnter(Collision c)
+	{
+		//print (c.gameObject);
+		if (contains (c) && punching)
+		{
+			print (c.gameObject);
+			c.gameObject.GetComponent<EnemyAnimation>().SendMessage("Die");
+		}
 	}
 
 	public void setActive(bool activeNew)
@@ -56,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Rotating (float horizontal, float vertical)
 	{
-		print ("here");
 		// Create a new vector of the horizontal and vertical inputs.
 		Vector3 targetDirection = new Vector3(horizontal, 0f, vertical);
 		
@@ -87,5 +102,20 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 		return res;
+	}
+
+	bool contains(Collision c)
+	{
+		foreach (GameObject enemy in enemies) {
+			if (enemy == c.gameObject)
+				return true;
+		}
+
+		return false;
+	}
+
+	public void setPunching(bool p)
+	{
+		punching = p;
 	}
 }

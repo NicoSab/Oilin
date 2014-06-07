@@ -10,7 +10,7 @@ public class DoorAnimation : MonoBehaviour
 	
 	private Animator anim;							// Reference to the animator component.
 	private GameObject player;						// Reference to the player GameObject.
-	private PlayerKey playerInventory;	// Reference to the PlayerInventory script.
+	private PlayerKey playerInventory;				// Reference to the PlayerInventory script.
 	private int count;								// The number of colliders present that should open the doors.
 	
 	

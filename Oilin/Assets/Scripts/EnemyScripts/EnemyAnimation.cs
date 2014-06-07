@@ -5,7 +5,7 @@ public class EnemyAnimation : MonoBehaviour
 {
 	public float deadZone = 5f;					// The number of degrees for which the rotation isn't controlled by Mecanim.
 	
-	
+	private bool enemyDead = false;
 	private Transform player;					// Reference to the player's transform.
 	private EnemySight enemySight;			// Reference to the EnemySight script.
 	private NavMeshAgent nav;					// Reference to the nav mesh agent.
@@ -110,5 +110,14 @@ public class EnemyAnimation : MonoBehaviour
 		angle *= Mathf.Deg2Rad;
 
 		return angle;
+	}
+
+	void Die()
+	{
+		if(!enemyDead) {
+			enemyDead = true;
+			anim.SetBool("Dead", enemyDead);
+		}else if(anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.Dying"))
+			anim.SetBool("Dead", false);
 	}
 }
