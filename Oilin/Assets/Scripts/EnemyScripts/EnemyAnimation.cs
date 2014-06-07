@@ -35,11 +35,22 @@ public class EnemyAnimation : MonoBehaviour
 		deadZone *= Mathf.Deg2Rad;
 	}
 	
+	protected bool paused;
 	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void Update () 
 	{
-		// Calculate the parameters that need to be passed to the animator component.
-		NavAnimSetup();
+
+		if (!paused) // Calculate the parameters that need to be passed to the animator component.
+			NavAnimSetup();
 	}
 	
 	

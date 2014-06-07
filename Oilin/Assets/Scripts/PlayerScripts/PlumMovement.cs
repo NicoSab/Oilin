@@ -17,31 +17,47 @@ public class PlumMovement : MonoBehaviour {
 			player = GameObject.Find("N40").transform;
 			relPlumPos = transform.position - player.position ;
 	}
-
+	protected bool paused;
+	
+	void OnPauseGame ()
+	{
+		paused = true;
+	}
+	
+	void OnResumeGame ()
+	{
+		paused = false;
+	}
 	void FixedUpdate()
 	{
-		if (!activeMov) {
-			Vector3 standardPos = player.position + relPlumPos;
-			newPos = standardPos;
-			transform.position = Vector3.Lerp(transform.position, newPos, smooth * Time.deltaTime);
-			SmoothLookAt();
-		} else {
-			float h = Input.GetAxis("Horizontal");
-			float v = Input.GetAxis("Vertical");
-			
-			MovementManagement(h, v);
+		if (!paused) 
+		{
+			if (!activeMov) {
+				Vector3 standardPos = player.position + relPlumPos;
+				newPos = standardPos;
+				transform.position = Vector3.Lerp(transform.position, newPos, smooth * Time.deltaTime);
+				SmoothLookAt();
+			} else {
+				float h = Input.GetAxis("Horizontal");
+				float v = Input.GetAxis("Vertical");
+				
+				MovementManagement(h, v);
+			}
 		}
 	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown("space")) {
-			GameObject.Find("N40").SendMessage("setActive", activeMov);
-			if (!activeMov)
-				Camera.main.SendMessage("SetPlayer", transform);
-			else
-				Camera.main.SendMessage("SetPlayer", player);
-			activeMov = !activeMov;
+		if (!paused) 
+		{
+			if (Input.GetKeyDown("space")) {
+				GameObject.Find("N40").SendMessage("setActive", activeMov);
+				if (!activeMov)
+					Camera.main.SendMessage("SetPlayer", transform);
+				else
+					Camera.main.SendMessage("SetPlayer", player);
+				activeMov = !activeMov;
+			}
 		}
 	}
 	
