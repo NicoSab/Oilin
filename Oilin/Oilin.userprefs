@@ -2,17 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayGesture.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="137" Column="44" />
-      <File FileName="Assets\Scripts\EnemyScripts\EnemySight.cs" Line="82" Column="33" />
-      <File FileName="Assets\Scripts\PlayerScripts\PlayerHealth.cs" Line="39" Column="3" />
-      <File FileName="Assets\Scripts\PlayerScripts\PlayerMovement.cs" Line="48" Column="5" />
-      <File FileName="Assets\Scripts\LevelDynamics\RecupCard.cs" Line="6" Column="19" />
-      <File FileName="Assets\Scripts\PlayerScripts\PlayerKey.cs" Line="6" Column="26" />
-      <File FileName="Assets\Scripts\PlayerScripts\PlayerOil.cs" Line="22" Column="47" />
-      <File FileName="Assets\Scripts\PlayerScripts\PlumMovement.cs" Line="17" Column="35" />
-      <File FileName="Assets\PlayGesture.cs" Line="31" Column="24" />
-      <File FileName="Assets\RightArrowGesture.cs" Line="25" Column="25" />
+      <File FileName="Assets\RightArrowGesture.cs" Line="23" Column="3" />
       <File FileName="Assets\LeftArrowGesture.cs" Line="21" Column="51" />
+      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="14" Column="1" />
+      <File FileName="Assets\PlayGesture.cs" Line="30" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
