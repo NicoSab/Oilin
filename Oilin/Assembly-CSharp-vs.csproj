@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ExitGesture.cs" />
+     <Compile Include="Assets\LeftArrowGesture.cs" />
      <Compile Include="Assets\PauseScript.cs" />
      <Compile Include="Assets\PlayGesture.cs" />
+     <Compile Include="Assets\RightArrowGesture.cs" />
      <Compile Include="Assets\Scripts\ActiveButton.cs" />
      <Compile Include="Assets\Scripts\ActiveDoor.cs" />
      <Compile Include="Assets\Scripts\AnimatorSetup.cs" />
