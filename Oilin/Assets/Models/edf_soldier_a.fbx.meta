@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 9a770e16db6034a3aaec501a5571980d
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: EDF_Body
     100002: EDF_Helmet
@@ -943,4 +943,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  additionalBone: 0
   userData: 

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8a2d23da643cb0d4a9ca6c6f1fffa66b
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: debris
     100002: debris_001
@@ -6347,4 +6347,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  additionalBone: 0
   userData: 

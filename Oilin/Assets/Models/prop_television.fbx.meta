@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 16914eee8698d4c48bebb3a09aa06c37
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: prop_television
     100002: //RootNode
@@ -62,4 +62,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  additionalBone: 0
   userData: 

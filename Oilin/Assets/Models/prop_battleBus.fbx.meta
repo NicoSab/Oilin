@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: d78b80b4f42e23542aec2a5c85a5260c
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
     100002: prop_battleBus
@@ -192,4 +192,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  additionalBone: 0
   userData: 

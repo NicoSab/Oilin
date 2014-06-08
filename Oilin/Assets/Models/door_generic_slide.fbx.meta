@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 11452b22824aa6248bdad79c4c8b63ad
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
     100002: door_generic_slide_panel_001
@@ -121,4 +121,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 

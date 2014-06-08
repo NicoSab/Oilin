@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 3b059b06d05c0e04ba42674f84feac25
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: char_cyberKid_Badge
     100002: char_cyberKid_board
@@ -1266,4 +1266,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  additionalBone: 0
   userData: 

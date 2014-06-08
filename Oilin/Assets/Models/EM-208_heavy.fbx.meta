@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e05bd9ce2298a46639c89dfd8909f85f
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
     100002: EM208heavy
@@ -526,4 +526,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  additionalBone: 0
   userData: 

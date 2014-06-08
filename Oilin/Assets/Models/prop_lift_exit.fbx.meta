@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: d7a26d0cd9726ba4c9924ae2366f88c3
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: door_exitInner
     100002: door_exitInner_left_001
@@ -121,4 +121,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
+  additionalBone: 0
   userData: 

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f2bed5dc5afacff44a00de8daae9703b
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Chest
     100002: chestProxy_geo
@@ -1296,4 +1296,5 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e8914d097ece7cc48a83d5fccd4098c0,
     type: 3}
   animationType: 3
+  additionalBone: 0
   userData: 
