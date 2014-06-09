@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/PlayerHealth.cs">
+    <Files>
+      <File FileName="Assets/Scripts/LevelCountDown.cs" Line="23" Column="26" />
+      <File FileName="Assets/Scripts/LevelDynamics/EndLevel.cs" Line="33" Column="2" />
+      <File FileName="Assets/Scripts/LevelDynamics/ScreenFader.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerHealth.cs" Line="54" Column="5" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PauseScript.cs">
+    <Files>
+      <File FileName="Assets\PauseScript.cs" Line="42" Column="25" />
+>>>>>>> 1bf847dcb14e8f6f069a9be11d1c6e02ddef2ea3
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
