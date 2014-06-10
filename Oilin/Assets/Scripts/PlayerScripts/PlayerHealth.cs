@@ -16,12 +16,17 @@ public class PlayerHealth : MonoBehaviour
 	private float timer;								// A timer for counting to the reset of the level once the player is dead.
 	private bool playerDead;							// A bool to show if the player is dead or not.
 	private int chanceBeforeDying = 3;
-	
+	private GlowEffect flash;
+	private bool flashLaunched = false;
+	private bool flashEnding = false;
+	private float timerFlash;
+
 	void Awake ()
 	{
 		// Setting up the references.
 		anim = GetComponent<Animator>();
 		playerMovement = GetComponent<PlayerMovement>();
+		flash = GameObject.Find ("Main Camera").GetComponent<GlowEffect> ();
 		GameObject tmp = GameObject.Find ("EndLevel");
 		if (tmp != null)
 			endLevel = tmp.GetComponent<EndLevel>();
@@ -76,12 +81,42 @@ public class PlayerHealth : MonoBehaviour
 					health = 5;
 					--chanceBeforeDying;
 					Transform safePoint = chooseSafePoint();
+					LaunchFlash();
 					transform.position = safePoint.position;
 				}
 			}
+
+			if (flashEnding && timerFlash >= 0f)
+			{
+				flash.glowTint = new Color(timerFlash / 10f, timerFlash / 10f, timerFlash / 10f);
+				timerFlash -= 0.5f;
+			}
+			if (flashEnding && timerFlash < 0f)
+			{
+				flashEnding = false;
+				timerFlash = 0f;
+			}
+			if (flashLaunched && timerFlash < 3f)
+			{
+				flash.glowTint = new Color(timerFlash / 3f, timerFlash / 3f, timerFlash / 3f);
+				timerFlash += 0.5f;
+			}
+
+			if (flashLaunched && timerFlash >= 3f)
+			{
+				flashEnding = true;
+				flashLaunched = false;
+				timerFlash = 10f;
+			}
+
 		}
 	}
-	
+
+	void LaunchFlash()
+	{
+		flashLaunched = true;
+		timerFlash = 0f;
+	}
 	
 	void PlayerDying ()
 	{
@@ -139,7 +174,8 @@ public class PlayerHealth : MonoBehaviour
 		float min = 1000f;
 
 		foreach (Transform safePoint in lastPlayerSighting.SafePoints) {
-			delta = safePoint.position.z - transform.position.z;
+			delta = Mathf.Sqrt(Mathf.Pow(safePoint.position.x - transform.position.x, 2) 
+			                   + Mathf.Pow(safePoint.position.z - transform.position.z, 2));
 			if (delta < min)
 			{
 				min = delta;

@@ -18746,6 +18746,7 @@ GameObject:
   - 114: {fileID: 845780132}
   - 82: {fileID: 845780138}
   - 81: {fileID: 845780139}
+  - 114: {fileID: 845780140}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18914,6 +18915,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845780131}
   m_Enabled: 1
+--- !u!114 &845780140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845780131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cace06af45c2036468ab22398c477793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowIntensity: 2
+  blurIterations: 3
+  blurSpread: .899999976
+  glowTint: {r: 0, g: 0, b: 0, a: 0}
+  compositeShader: {fileID: 4800000, guid: 96ca71e39c7b6fb4f9bec2c5bf331349, type: 3}
+  blurShader: {fileID: 4800000, guid: fb52973118cf00648825ced2fcca240c, type: 3}
+  downsampleShader: {fileID: 4800000, guid: b14b79b8936134d3f8238f0c2d40d634, type: 3}
 --- !u!1 &847629573
 GameObject:
   m_ObjectHideFlags: 0
