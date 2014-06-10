@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayGesture.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelDynamics\EndLevel.cs">
     <Files>
+      <File FileName="Assets\GoNextLevelScript.cs" Line="20" Column="21" />
       <File FileName="Assets\RightArrowGesture.cs" Line="23" Column="3" />
-      <File FileName="Assets\LeftArrowGesture.cs" Line="21" Column="51" />
-      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="14" Column="1" />
-      <File FileName="Assets\PlayGesture.cs" Line="30" Column="3" />
+      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\PlayGesture.cs" Line="62" Column="3" />
+      <File FileName="Assets\Scripts\LevelDynamics\EndLevel.cs" Line="25" Column="31" />
+      <File FileName="Assets\Scripts\LevelCountDown.cs" Line="26" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

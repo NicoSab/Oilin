@@ -32,10 +32,13 @@ public class PlayerHealth : MonoBehaviour
 
 	void OnGUI()
 	{
-		if (barreVieBg != null)
-			GUI.DrawTexture(new Rect(20,30,barreVieBg.width, barreVieBg.height), barreVieBg);
-		if (barreVie != null)
-			GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
+		if (!LevelCountDown.ended)
+		{
+			if (barreVieBg != null)
+				GUI.DrawTexture(new Rect(20,30,barreVieBg.width, barreVieBg.height), barreVieBg);
+			if (barreVie != null)
+				GUI.DrawTexture(new Rect(20,30,barreVie.width * health / 5, barreVie.height), barreVie);
+		}
 	}
 	
 	protected bool paused;
