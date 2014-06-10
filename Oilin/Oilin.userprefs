@@ -1,13 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayGesture.cs">
-    <Files>
-      <File FileName="Assets\RightArrowGesture.cs" Line="23" Column="3" />
-      <File FileName="Assets\LeftArrowGesture.cs" Line="21" Column="51" />
-      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="14" Column="1" />
-      <File FileName="Assets\PlayGesture.cs" Line="30" Column="3" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
