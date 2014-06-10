@@ -12,6 +12,7 @@ public class EndLevel : MonoBehaviour {
 	private float end2 = 2f;
 	private bool col = false;
 	private PlayerKey playerKey;
+	private EndMenuScreen endMenu;
 
 	void Awake ()
 	{
@@ -21,6 +22,8 @@ public class EndLevel : MonoBehaviour {
 		playerKey = player.GetComponent<PlayerKey>();
 		camMovement = Camera.main.gameObject.GetComponent<CameraMovement>();
 		sf = GameObject.Find("ScreenFader").GetComponent<ScreenFader>();
+		endMenu = GameObject.Find("EndScreen").GetComponent<EndMenuScreen>();
+
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -30,8 +33,7 @@ public class EndLevel : MonoBehaviour {
 			col = true;
 		}
 	}
-
-
+	
 	public void EndOfLevel()
 	{
 		timer += Time.deltaTime;
@@ -41,10 +43,10 @@ public class EndLevel : MonoBehaviour {
 			playerAnim.SetFloat("Speed", 0f);
 			camMovement.enabled = false;
 			player.transform.parent = transform;
+			LevelCountDown.ended = true;
+			endMenu.SaveScore();
+			endMenu.Show();
 		}
-
-		if(timer >= end2)
-			sf.FadeScreen();
 	}
 	protected bool paused;
 	

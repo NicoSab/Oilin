@@ -15,8 +15,8 @@ public class RecupOil : MonoBehaviour {
 	{
 		if (other.gameObject == player)
 		{	
-			playerOil.playerOil += 1;
-			
+			playerOil.IncrementOil();
+
 			Destroy(gameObject);
 		}
 	}

@@ -6,13 +6,18 @@ public class LevelCountDown : MonoBehaviour {
 	public int startTime = 120;
 	private string textTime;
 	private EndLevel endLevel;
+	public static int timeScore = 1000;
+	public static bool ended = false;
+	GameObject scoreTime;
 
 	void Awake()
 	{
 		endLevel = GameObject.Find ("EndLevel").GetComponent<EndLevel>();
+		ended = false;
+		scoreTime = GameObject.Find ("ScoreTime");
 	}
 
-	void OnGUI()
+	void Update()
 	{
 		int guiTime = (int)(startTime - Time.time);
 
@@ -22,7 +27,12 @@ public class LevelCountDown : MonoBehaviour {
 		if (guiTime <= 0)
 			endLevel.EndOfLevel();
 
-		textTime = string.Format("{0:00} : {1:00}", min, sec);
-		GUI.Label(new Rect(400, 25, 200, 30), textTime);
+		if (!ended)
+			timeScore = (guiTime * 1000 / startTime) + PlayerOil.oilScore;
+		textTime = timeScore.ToString();
+		if (!LevelCountDown.ended)
+				scoreTime.guiText.text = textTime;
+		else 
+				scoreTime.guiText.text = "";
 	}
 }
