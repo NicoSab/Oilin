@@ -1,19 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 <<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelDynamics\EndLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelDynamics/EndLevel.cs">
     <Files>
-      <File FileName="Assets\GoNextLevelScript.cs" Line="20" Column="21" />
-      <File FileName="Assets\RightArrowGesture.cs" Line="23" Column="3" />
-      <File FileName="Assets\Scripts\EnemyScripts\EnemyAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\PlayGesture.cs" Line="62" Column="3" />
-      <File FileName="Assets\Scripts\LevelDynamics\EndLevel.cs" Line="25" Column="31" />
-      <File FileName="Assets\Scripts\LevelCountDown.cs" Line="26" Column="23" />
+      <File FileName="Assets/Scripts/LevelCountDown.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/PlayerScripts/PlayerMovement.cs" Line="42" Column="1" />
+      <File FileName="Assets/Scripts/LevelDynamics/EndLevel.cs" Line="25" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerScripts\PlayerHealth.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerScripts\PlayerHealth.cs" Line="90" Column="19" />
+      <File FileName="Assets\LeftArrowGesture.cs" Line="1" Column="1" />
+>>>>>>> ec2a9ea9fe10af68852389f92110290eb650b25b
     </Files>
   </MonoDevelop.Ide.Workbench>
->>>>>>> 32fe50b30281c4ef070210632d94e688364ecd58
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

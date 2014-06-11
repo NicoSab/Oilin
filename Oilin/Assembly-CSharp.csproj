@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\EnemyScripts\EnemySight.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\WayPointGizmo.cs" />
      <Compile Include="Assets\Scripts\GameControllerScripts\LastPlayerSighting.cs" />
+     <Compile Include="Assets\Scripts\GlowEffect.cs" />
      <Compile Include="Assets\Scripts\LevelCountDown.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\LevelDynamics\DoorAnimation.cs" />
