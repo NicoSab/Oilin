@@ -9,7 +9,8 @@ public class GoNextLevelScript : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
-		//Application.LoadLevel ("level" + indexLevel.ToString());
+		int indexLevel = int.Parse(Application.loadedLevelName.Substring (Application.loadedLevelName.Length - 2));
+		Application.LoadLevel ("level" + indexLevel.ToString());
 	}
 	void OnMouseOver()
 	{
